@@ -1,0 +1,107 @@
+#!/bin/sh
+
+LINUX="$(dirname "$0")"
+
+
+# catch and export parameters
+fn=$1
+firstParameter=$2
+secondParameter=$3
+allParameters=${@:2}
+
+export LINUX
+export fn
+export firstParameter
+export secondParameter
+export allParameters
+
+COMMANDS=(
+    list
+    info
+    lock
+    restart
+    sleep
+    shutdown
+    uptime
+    mem
+    ports
+    ip.loc
+    ip.pub
+    clock
+    fd.size
+    fd.hid
+    md5
+    g.init
+    g.clone
+    g.log
+    g.stat
+    g.open
+    g.size
+    g.re
+    g.conf
+    g.undo
+    g.add
+    g.add.all
+    g.commit
+    g.ac
+    g.aca
+    g.acp
+    g.acap
+    g.mv
+    g.rm
+    g.push
+    g.pull
+    g.merge
+    g.th.bh
+    g.th.re.bh
+    g.co.bh
+    g.co.re.bh
+    g.ls.bh
+    g.rm.bh
+    g.rm.re.bh
+    g.lfs.init
+    g.lfs.tk
+    g.lfs.untk
+    g.lfs.ls
+    g.lfs.conf
+    pdf.html
+    wttr
+    top10
+    starwar
+    ol.open
+    lszip
+    unzip
+    zip
+    lstar
+    untar
+    tar
+)
+
+if [ -z "$fn" ]; then
+    fn="list"
+fi
+
+if [[ ! " ${COMMANDS[@]} " =~ " ${fn} " ]]; then
+    echo "${RED}Command not found: ${NC}"
+    echo "$fn"
+    echo
+    echo "Do you mean: "
+    for cmd in "${COMMANDS[@]}"; do
+        if test "${cmd#*$fn}" != "$cmd"
+        then
+            echo "${cmd}"
+        fi
+    done
+
+    if [ ! -z "$allParameters" -a "$allParameters" != " " ]; then
+        echo "${RED}\nParameters: ${NC}"
+        echo "$allParameters"
+    fi
+fi
+
+# Linking plugins
+"$LINUX/tools/help.sh"
+"$LINUX/tools/general.sh"
+"$LINUX/tools/git.sh"
+"$LINUX/tools/functors.sh"
+"$LINUX/tools/compressor.sh"
