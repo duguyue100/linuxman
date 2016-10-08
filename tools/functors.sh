@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # functions that brought by external tools
 

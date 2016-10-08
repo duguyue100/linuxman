@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 _W_DEVICE=${_W_DEVICE:-en0}
 

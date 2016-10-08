@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Some functions related to some Git routines.
 
