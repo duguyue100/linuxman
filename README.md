@@ -1,4 +1,4 @@
-# linuman
+# linuxman
 
 _Some handy tools for Linux command line (primarily for Ubuntu)_
 
