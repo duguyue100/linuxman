@@ -16,7 +16,7 @@ git clone https://github.com/duguyue100/linuxman
 Add the alias to the terminal profile:
 
 ```bash
-alias lman="/path/to/linuxman/linuxmac"
+alias lman="/path/to/linuxman/linuxman"
 ```
 
 And you are done!
