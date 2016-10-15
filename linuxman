@@ -75,6 +75,28 @@ COMMANDS=(
     lstar
     untar
     tar
+    s.re
+    s.de
+    s.ls
+    s.at
+    s.rm
+    t.at
+    t.ls
+    t.de
+    t.re
+    t.rm
+    t.rm.all
+    t.div.h
+    t.div.v
+    t.go.left
+    tl
+    t.go.right
+    tr
+    t.go.up
+    tu
+    t.go.down
+    td
+    tpx
 )
 
 if [ -z "$fn" ]; then
@@ -105,3 +127,4 @@ fi
 "$LINUX/tools/git.sh"
 "$LINUX/tools/functors.sh"
 "$LINUX/tools/compressor.sh"
+"$LINUX/tools/multiterm.sh"

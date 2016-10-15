@@ -36,7 +36,7 @@ Shutdown your machine
 lman shutdown
 ```
 
-## Available Functions - 64 and counting...
+## Available Functions - 80 and counting...
 
 ```
 Linux Terminal Tools
@@ -105,6 +105,30 @@ lman unzip      : Unzip a file or folder.
 lman lstar      : List file in a tar archive.
 lman tar        : Tar a file or folder.
 lman untar      : Untar a file or folder.
+--------------------------------------------------------------
+Terminal Multiplexer (screen and tmux)
+lman s.at       : Create a new screen session
+lman s.re       : Reattach a screen session
+lman s.de       : Detach a screen session
+lman s.rm       : Remove a screen session
+lman s.ls       : List all available screen session(s)
+lman t.at       : Create a new tmux session
+lman t.re       : Reattach a tmux session
+lman t.de       : Detach a tmux session
+lman t.rm       : Remove a tmux session
+lman t.rm.all   : Remove all tmux session(s)
+lman t.ls       : List all available tmux session(s)
+lman t.div.h    : Split pane horizontally
+lman t.div.v    : split pane vertically
+lman t.go.left  : Go left pane
+    (tl)
+lman t.go.right : Go right pane
+    (tr)
+lman t.go.up    : Go above pane
+    (tu)
+lman t.go.down  : Go below pane
+    (td)
+lman tpx        : Kill current pane
 ==============================================================
 ```
 
