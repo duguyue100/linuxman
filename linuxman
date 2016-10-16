@@ -17,6 +17,18 @@ export allParameters
 
 COMMANDS=(
     list
+    help
+    helper
+    h
+    gen
+    git
+    g
+    fun
+    f
+    com
+    c
+    term
+    t
     info
     lock
     restart
@@ -36,6 +48,7 @@ COMMANDS=(
     g.log
     g.stat
     g.open
+    go
     g.size
     g.re
     g.conf
@@ -69,6 +82,7 @@ COMMANDS=(
     top10
     starwar
     ol.open
+    olgo
     lszip
     unzip
     zip

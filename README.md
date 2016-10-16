@@ -36,101 +36,114 @@ Shutdown your machine
 lman shutdown
 ```
 
-## Available Functions - 80 and counting...
+## Available Functions - 82 and counting...
 
-```
-Linux Terminal Tools
-==============================================================
-lman list/help  : List all the available commands.
-lman info       : Get Linux version information
-lman lock       : Lock your computer
-lman restart    : Restart your computer
-lman sleep      : Put computer in sleep mode
-lman shutdown   : Shutdown your computer
-lman uptime     : Get the time since last restart
-lman mem        : Get the memory status
-lman ports      : List all used ports
-lman ip.loc     : Get Local IP address
-lman ip.pub     : Get Public IP address
-lman clock      : Show a clock at the top right of your terminal
-lman fd.size    : Show the folder size.
-lman fd.hid     : List only hidden files in the folder.
-lman md5        : Calculate MD5 for a file
---------------------------------------------------------------
-Git Related
-lman g.init     : Init a Git repository locally
-lman g.clone    : Clone a project through URL
-lman g.log      : Get the log of the project
-lman g.stat     : Print the status of the proejct
-lman g.open     : Open the Git repo from URL
-lman g.size     : Calculate the size of Git Repo
-lman g.re       : Add an push/pull origin
-lman g.conf     : List the git configuration
-lman g.undo     : Undo last commit
-lman g.add      : Stage a file
-lman g.add.all  : Stage all the changes
-lman g.commit   : Commit the changes
-lman g.ac       : Stage a file and commit
-lman g.aca      : Stage all changes and commit
-lman g.acp      : Stage file, commit and push
-lman g.acap     : Stage all, commit and push
-lman g.mv       : Move file to new destination
-lman g.rm       : Remove file.
-lman g.push     : Push to current branch
-lman g.pull     : Pull to current branch
-lman g.merge    : Merge a specific branch
-lman g.th.bh    : Touch (create) a new branch
-lman g.th.re.bh : Touch (clone) a remote branch
-lman g.co.bh    : Checkout a existing branch
-lman g.co.re.bh : Checkout a remote branch
-lman g.ls.bh    : List all the branch
-lman g.rm.bh    : Remove a local branch
-lman g.rm.re.bh : Remove a branch from local and remote
-lman g.lfs.init : Init LFS storage
-lman g.lfs.tk   : LFS track files
-lman g.lfs.untk : LFS untrack files
-lman g.lfs.ls   : List all tracked files
-lman g.lfs.conf : Get the environment variables for the LFS.
---------------------------------------------------------------
-Functors - extra tools
-lman wttr       : Show the weather for a city.
-lman top10      : Show the top10 used shell commands.
-lman starwar    : Text based Starwar IV
-lman ol.open    : Open a Overleaf Project
---------------------------------------------------------------
-Compressor
-lman lszip      : List file in a ZIP archive.
-lman zip        : Zip a file or folder.
-lman unzip      : Unzip a file or folder.
-lman lstar      : List file in a tar archive.
-lman tar        : Tar a file or folder.
-lman untar      : Untar a file or folder.
---------------------------------------------------------------
-Terminal Multiplexer (screen and tmux)
-lman s.at       : Create a new screen session
-lman s.re       : Reattach a screen session
-lman s.de       : Detach a screen session
-lman s.rm       : Remove a screen session
-lman s.ls       : List all available screen session(s)
-lman t.at       : Create a new tmux session
-lman t.re       : Reattach a tmux session
-lman t.de       : Detach a tmux session
-lman t.rm       : Remove a tmux session
-lman t.rm.all   : Remove all tmux session(s)
-lman t.ls       : List all available tmux session(s)
-lman t.div.h    : Split pane horizontally
-lman t.div.v    : split pane vertically
-lman t.go.left  : Go left pane
-    (tl)
-lman t.go.right : Go right pane
-    (tr)
-lman t.go.up    : Go above pane
-    (tu)
-lman t.go.down  : Go below pane
-    (td)
-lman tpx        : Kill current pane
-==============================================================
-```
+### General
+
+| Command          | Parameters  | Description                                          |
+| :------          | :---------- | :-------------------------------                     |
+| `list` or `help` |             | List all the available commands.                     |
+| `helper` or `h`  |             | Get help for help functions.                         |
+| `gen`            |             | Get help for General functions.                      |
+| `git` or `g`     |             | Get help for Git related functions.                  |
+| `fun` or `f`     |             | Get help for Functors related functions.             |
+| `com` or `c`     |             | Get help for Compressor related functions.           |
+| `term` or `t`    |             | Get help for Terminal Multiplexer related functions. |
+| `info`           |             | Get OS X version information.                        |
+| `lock`           |             | Lock your mac.                                       |
+| `restart`        |             | Restart your mac.                                    |
+| `shutdown`       |             | Shutdown your mac.                                   |
+| `uptime`         |             | Get the time since last restart.                     |
+| `mem`            |             | Get the memory status.                               |
+| `speed`          |             | Network speed test with `npm`'s `fast-cli` package.  |
+| `ports`          |             | List all used ports.                                 |
+| `ip.loc`         |             | Get local IP address.                                |
+| `ip.pub`         |             | Get public IP address.                               |
+| `clock`          |             | Show a clock at the top right of your terminal.      |
+| `fd.size`        |             | Show the folder size.                                |
+| `fd.hid`         |             | List only hidden files in the folder.                |
+| `md5`            | `file`      | Calculate MD5 for a file.                            |
+
+### Git
+
+| Command          | Parameters      | Description                                |
+| :------          | :----------     | :-------------------------------           |
+| `g.init`         |                 | Init a Git repository locally.             |
+| `g.clone`        | `repo link`     | Clone a project through URL.               |
+| `g.log`          | `(OPT) file`    | Get the log for the file or the repo.      |
+| `g.stat`         |                 | Get the status of the repo.                |
+| `g.open` or `go` |                 | Open the Git repo from URL.                |
+| `g.size`         |                 | Calculate the size of Git repo.            |
+| `g.re`           | `URL`           | Add an pull/pull origin.                   |
+| `g.conf`         |                 | List the Git repo configuration.           |
+| `g.undo`         |                 | Undo last commit.                          |
+| `g.add`          | `file`          | Stage a file.                              |
+| `g.add.all`      |                 | Stage all the changes.                     |
+| `g.commit`       | `msg`           | Commit the changes.                        |
+| `g.ac`           | `file` `msg`    | Stage a file and commit.                   |
+| `g.aca`          | `msg`           | Stage all changes and commit.              |
+| `g.acp`          | `file` `msg`    | Stage file, commit and push.               |
+| `g.acap`         | `msg`           | Stage all changes, commit and push.        |
+| `g.mv`           | `file1` `file2` | Move file to new destination               |
+| `g.rm`           | `file`          | Remove file.                               |
+| `g.push`         |                 | Push current branch.                       |
+| `g.pull`         |                 | Pull current branch.                       |
+| `g.merge`        | `branch`        | Merge a specific branch.                   |
+| `g.th.bh`        | `branch`        | Create a new branch.                       |
+| `g.th.re.bh`     | `remote branch` | Clone a remote branch.                     |
+| `g.co.bh`        | `branch`        | Checkout a existing branch.                |
+| `g.co.re.bh`     | `remote branch` | Checkout a remote branch.                  |
+| `g.ls.bh`        |                 | List all the branch.                       |
+| `g.rm.bh`        | `branch`        | Remove a local branch.                     |
+| `g.rm.re.bh`     | `branch`        | Remove a branch from local and remote.     |
+| `g.lfs.init`     |                 | Initial LFS storage.                       |
+| `g.lfs.tk`       | `file`          | LFS track files.                           |
+| `g.lfs.untk`     | `file`          | LFS untrack files.                         |
+| `g.lfs.ls`       |                 | List all tracked files.                    |
+| `glfs.conf`      |                 | Get the environmetn variables for the LFS. |
+
+### Functor
+
+| Command             | Parameters  | Description                             |
+| :------             | :---------- | :-------------------------------        |
+| `wttr`              |             | Show the weather for a city.            |
+| `top10`             |             | Show the top 10 used shell commands.    |
+| `starwar`           |             | Text based Starwar IV.                  |
+| `ol.open` or `olgo` |             | Open a Overleaf Project.                |
+
+### Compressor
+
+| Command | Parameters            | Description                      |
+| :------ | :----------           | :------------------------------- |
+| `lszip` | `file`                | List file in a ZIP archive.      |
+| `zip`   | `file` or `folder`    | Zip a file or folder.            |
+| `unzip` | `file` `(OPT) folder` | Unzip a file to a folder.        |
+| `lstar` | `file`                | List file in a tar archive.      |
+| `tar`   | `file` or `folder`    | Tar a file or folder.            |
+| `untar` | `file` `(OPT) folder` | Untar a file to a folder.        |
+
+### Terminal Multiplexer
+
+| Command              | Parameters   | Description                           |
+| :------              | :----------  | :-------------------------------      |
+| `s.at`               | `(OPT) name` | Create a new screen session.          |
+| `s.re`               | `name`       | Reattach a screen session.            |
+| `s.de`               | `name`       | Detach a screen session.              |
+| `s.rm`               | `name`       | Remove a screen session.              |
+| `s.ls`               |              | List all available screen session(s). |
+| `t.at`               | `(OPT) name` | Create a new tmux session.            |
+| `t.re`               | `name`       | Detach a tmux session.                |
+| `t.de`               |              | Detach current tmux session.          |
+| `t.rm`               | `name`       | Remove a tmux session.                |
+| `t.rm.all`           |              | Remove all tmux session(s).           |
+| `t.ls`               |              | List all available tmux session(s).   |
+| `t.div.h`            |              | Split pane horizontally.              |
+| `t.div.v`            |              | Split pane vertically.                |
+| `t.go.left` or `tl`  |              | Go left pane.                         |
+| `t.go.right` or `tr` |              | Go right pane.                        |
+| `t.go.up` or `tu`    |              | Go above pane.                        |
+| `t.go.down` or `td`  |              | Go below pane.                        |
+| `tpx`                |              | Kill current pane.                    |
 
 ## Tools for Extra Functions
 
