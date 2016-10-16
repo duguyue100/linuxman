@@ -1,5 +1,5 @@
 # linuxman
-[![GitHub release](https://img.shields.io/github/release/duguyue100/macman.svg?style=flat-square)](https://github.com/duguyue100/macman)
+[![GitHub release](https://img.shields.io/github/release/duguyue100/linuxman.svg?style=flat-square)](https://github.com/duguyue100/linuxman)
 
 _Some handy tools for Linux command line (primarily for Ubuntu)_
 
