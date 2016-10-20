@@ -37,7 +37,7 @@ Shutdown your machine
 lman shutdown
 ```
 
-## Available Functions - 82 and counting...
+## Available Functions - 94 and counting...
 
 ### General
 
@@ -125,26 +125,38 @@ lman shutdown
 
 ### Terminal Multiplexer
 
-| Command              | Parameters   | Description                           |
-| :------              | :----------  | :-------------------------------      |
-| `s.at`               | `(OPT) name` | Create a new screen session.          |
-| `s.re`               | `name`       | Reattach a screen session.            |
-| `s.de`               | `name`       | Detach a screen session.              |
-| `s.rm`               | `name`       | Remove a screen session.              |
-| `s.ls`               |              | List all available screen session(s). |
-| `t.at`               | `(OPT) name` | Create a new tmux session.            |
-| `t.re`               | `name`       | Detach a tmux session.                |
-| `t.de`               |              | Detach current tmux session.          |
-| `t.rm`               | `name`       | Remove a tmux session.                |
-| `t.rm.all`           |              | Remove all tmux session(s).           |
-| `t.ls`               |              | List all available tmux session(s).   |
-| `t.div.h`            |              | Split pane horizontally.              |
-| `t.div.v`            |              | Split pane vertically.                |
-| `t.go.left` or `tl`  |              | Go left pane.                         |
-| `t.go.right` or `tr` |              | Go right pane.                        |
-| `t.go.up` or `tu`    |              | Go above pane.                        |
-| `t.go.down` or `td`  |              | Go below pane.                        |
-| `tpx`                |              | Kill current pane.                    |
+| Command               | Parameters    | Description                             |
+| :------               | :----------   | :-------------------------------        |
+| `s.at`                | `(OPT) name`  | Create a new screen session.            |
+| `s.re`                | `name`        | Reattach a screen session.              |
+| `s.de`                | `name`        | Detach a screen session.                |
+| `s.ls`                |               | List all available screen session(s).   |
+| `s.rm`                | `name`        | Remove a screen session.                |
+| `s.rm.all"            |               | Remove all available screen session(s). |
+| `s.div.h`             |               | Split region horizontally.              |
+| `s.div.v`             |               | Split region vertically.                |
+| `s.go.left` or `sl`   |               | Go left region.                         |
+| `s.go.right` or `sr`  |               | Go right region.                        |
+| `s.go.up` or `su`     |               | Go above region.                        |
+| `s.go.down` or `sd`   |               | Go below region.                        |
+| `spx`                 |               | Kill current region.                    |
+| `s.re.left` or `srl`  | `(OPT) +space`| Expand region horizontally              |
+| `s.re.right` or `srr` | `(OPT) -space`| Shrink region horizontally              |
+| `s.re.up` or `sru`    | `(OPT) +space`| Expand region vertically                |
+| `s.re.down` or `srd`  | `(OPT) -space`| Shrink region vertically                |
+| `t.at`                | `(OPT) name`  | Create a new tmux session.              |
+| `t.re`                | `name`        | Detach a tmux session.                  |
+| `t.de`                |               | Detach current tmux session.            |
+| `t.rm`                | `name`        | Remove a tmux session.                  |
+| `t.rm.all`            |               | Remove all tmux session(s).             |
+| `t.ls`                |               | List all available tmux session(s).     |
+| `t.div.h`             |               | Split pane horizontally.                |
+| `t.div.v`             |               | Split pane vertically.                  |
+| `t.go.left` or `tl`   |               | Go left pane.                           |
+| `t.go.right` or `tr`  |               | Go right pane.                          |
+| `t.go.up` or `tu`     |               | Go above pane.                          |
+| `t.go.down` or `td`   |               | Go below pane.                          |
+| `tpx`                 |               | Kill current pane.                      |
 
 ## Tools for Extra Functions
 
@@ -160,6 +172,17 @@ One could install Git LFS from [Git LFS](https://git-lfs.github.com/)
 
 The `git` URL that is given by Overleaf cannot be opened.
 Therefore, one can use `ol.open` to open the corresponding project from terminal.
+
+### Terminal Multiplexer
+
+One could install `screen` or `tmux` on the platform to enable terminal
+multiplexer.
+
+GNU Screen is known to be stable and fast over SSH connection,
+whereas `tmux` is very slow via SSH connction.
+
+However, `tmux` is has very powerful configuration so it works perfectly
+in local environment.
 
 ## Contacts
 
