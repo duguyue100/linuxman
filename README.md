@@ -37,7 +37,7 @@ Shutdown your machine
 lman shutdown
 ```
 
-## Available Functions - 94 and counting...
+## Available Functions - 96 and counting...
 
 ### General
 
@@ -97,6 +97,8 @@ lman shutdown
 | `g.ls.bh`        |                    | List all the branch.                                 |
 | `g.rm.bh`        | `branch`           | Remove a local branch.                               |
 | `g.rm.re.bh`     | `branch`           | Remove a branch from local and remote.               |
+| `g.stash`        |                    | Make a stash, stay away from dirty work tree.        |
+| `g.unstash`      |                    | Get out from stash (EVERY CHANGES IN THERE COUNTS)   |
 | `g.lfs.init`     |                    | Initial LFS storage.                                 |
 | `g.lfs.tk`       | `file`             | LFS track files.                                     |
 | `g.lfs.untk`     | `file`             | LFS untrack files.                                   |
