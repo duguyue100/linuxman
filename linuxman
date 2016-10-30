@@ -62,6 +62,7 @@ COMMANDS=(
     g.acap
     g.mv
     g.rm
+    g.wipe
     g.push
     g.pull
     g.merge
