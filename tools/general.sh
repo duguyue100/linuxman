@@ -8,11 +8,11 @@ case "$fn" in
     ;;
 
     "lock")
-        systemctl suspend
+        gnome-screensaver-command -l
     ;;
 
     "restart")
-        sudo reboot
+        reboot
     ;;
 
     "sleep")
@@ -28,7 +28,7 @@ case "$fn" in
     ;;
 
     "mem")
-        top -o MEM
+        htop
     ;;
 
     # list of used ports
@@ -38,9 +38,9 @@ case "$fn" in
     ;;
 
     "ip.loc")
-        local_ip=$(ipconfig getifaddr en0)
+        local_ip=$(hostname -I)
         if [ $? != 0 ]; then
-            local_ip=$(ipconfig getifaddr en1)
+            local_ip=$(hostname -I)
         fi
 
         echo "Your local IP address is: ${local_ip}"
