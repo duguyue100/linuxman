@@ -31,4 +31,21 @@ case "$fn" in
         xdg-open 2>/dev/null "${git_remote/git/www}"
     ;;
 
+    "share")
+        cp $LINUX/res/share.md $SHARE_PATH
+        local_ip=$(hostname -I | cut -d' ' -f1)
+        if [ $? != 0 ]; then
+            local_ip=$(hostname -I | cut -d' ' -f1)
+        fi
+        sed -i "s/toreplace/$local_ip/g" $SHARE_PATH/share.md
+        cd $SHARE_PATH
+        git pull origin master
+        git add $SHARE_PATH/share.md
+        git commit -m "update share.md"
+        git push origin master
+        pushd $HOME/share;
+        python -m SimpleHTTPServer;
+        popd
+    ;;
+
 esac

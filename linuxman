@@ -87,6 +87,7 @@ COMMANDS=(
     starwar
     ol.open
     olgo
+    share
     lszip
     unzip
     zip
