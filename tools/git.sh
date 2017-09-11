@@ -12,7 +12,7 @@ case "$fn" in
     ;;
 
     "g.open"|"go")
-         open `git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@'`| head -n1
+         xdg-open 2>/dev/null `git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@'`| head -n1
     ;;
 
     "g.size")
