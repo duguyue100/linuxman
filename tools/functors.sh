@@ -48,4 +48,12 @@ case "$fn" in
         popd
     ;;
 
+    "ag")
+        ag $allParameters
+    ;;
+
+    "waka")
+        xdg-open 2>/dev/null https://wakatime.com/dashboard 
+    ;;
+
 esac

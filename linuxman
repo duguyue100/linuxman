@@ -85,6 +85,8 @@ COMMANDS=(
     wttr
     top10
     starwar
+    ag
+    waka
     ol.open
     olgo
     share

@@ -69,6 +69,8 @@ case "$fn" in
         echo "lman starwar    : Text based Starwar IV"
         echo "lman ol.open    : Open a Overleaf Project"
         echo "     (olgo)"
+        echo "lman ag         : Code Search"
+        echo "lman waka       : Check WAKA!"
         echo "--------------------------------------------------------------"
         echo "Compressor"
         echo "--------------------------------------------------------------"
@@ -214,6 +216,8 @@ case "$fn" in
         echo "lman starwar    : Text based Starwar IV"
         echo "lman ol.open    : Open a Overleaf Project"
         echo "     (olgo)"
+        echo "lman ag         : Code Search"
+        echo "lman waka       : Check WAKA!"
         echo "--------------------------------------------------------------"
     ;;
 
