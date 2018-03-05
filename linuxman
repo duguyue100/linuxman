@@ -29,6 +29,7 @@ COMMANDS=(
     c
     term
     t
+    cluster
     info
     lock
     restart
@@ -138,6 +139,14 @@ COMMANDS=(
     t.go.down
     td
     tpx
+    c.sb
+    c.ls.job
+    c.load
+    c.load.cuda
+    c.load.vesta
+    c.avail
+    c.act
+    c.deact
 )
 
 if [ -z "$fn" ]; then
@@ -169,3 +178,4 @@ fi
 "$LINUX/tools/functors.sh"
 "$LINUX/tools/compressor.sh"
 "$LINUX/tools/multiterm.sh"
+"$LINUX/tools/cluster.sh"

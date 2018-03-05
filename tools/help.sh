@@ -125,6 +125,17 @@ case "$fn" in
         echo "lman t.go.down  : Go below pane"
         echo "    (td)"
         echo "lman tpx        : Kill current pane"
+        echo "--------------------------------------------------------------"
+        echo "Functions for cluster use"
+        echo "--------------------------------------------------------------"
+        echo "c.sb         : Submit a job to cluster via a valid .job script"
+        echo "c.ls.job     : List all your submission"
+        echo "c.load       : Load modules by taking a list of module names"
+        echo "c.load.cuda  : Load cuda module (uzh only)"
+        echo "c.load.vesta : Load vesta partition (uzh only)"
+        echo "c.avail      : Check available module"
+        echo "c.act        : Activate specific Anaconda environment"
+        echo "c.deact      : Deactivate Anaconda environment"
         echo "=============================================================="
     ;;
     
@@ -282,4 +293,20 @@ case "$fn" in
         echo "lman tpx        : Kill current pane"
         echo "--------------------------------------------------------------"
     ;;
+
+    "cluster"|"c")
+        echo "--------------------------------------------------------------"
+        echo "Functions for cluster use"
+        echo "--------------------------------------------------------------"
+        echo "c.sb         : Submit a job to cluster via a valid .job script"
+        echo "c.ls.job     : List all your submission"
+        echo "c.load       : Load modules by taking a list of module names"
+        echo "c.load.cuda  : Load cuda module (uzh only)"
+        echo "c.load.vesta : Load vesta partition (uzh only)"
+        echo "c.avail      : Check available module"
+        echo "c.act        : Activate specific Anaconda environment"
+        echo "c.deact      : Deactivate Anaconda environment"
+        echo "--------------------------------------------------------------"
+    ;;
+        
 esac
