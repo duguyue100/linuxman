@@ -180,11 +180,19 @@ case "$fn" in
     # Sync other panes to the same folder
     'tcd')
         _pane_current=$(tmux display-message -p '#P')
-        for _pane in $(tmux list-panes -F '#P'); do
-          if (( "$_pane" != "$_pane_current" )); then
-            tmux send-keys -t ${_pane} "cd $(pwd)" ENTER
-          fi
-        done
+        if [ ! -z "$firstParameter" -a "$firstParameter" != " " ]; then
+            for _pane in $(tmux list-panes -F '#P'); do
+              if (( "$_pane" != "$_pane_current" )); then
+                tmux send-keys -t ${_pane} "cd ${firstParameter}" ENTER
+              fi
+            done
+        else
+            for _pane in $(tmux list-panes -F '#P'); do
+              if (( "$_pane" != "$_pane_current" )); then
+                tmux send-keys -t ${_pane} "cd $(pwd)" ENTER
+              fi
+            done
+        fi
     ;;
 
     # Sync all panes to the given folder
@@ -194,7 +202,9 @@ case "$fn" in
               tmux send-keys -t ${_pane} "cd $firstParameter" ENTER
             done
         else
-            echo "Please specify a folder you would like to go"
+            for _pane in $(tmux list-panes -F '#P'); do
+                tmux send-keys -t ${_pane} "cd $(pwd)" ENTER
+            done
         fi
     ;;
 
