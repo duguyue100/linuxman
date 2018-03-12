@@ -177,6 +177,7 @@ case "$fn" in
         tmux kill-pane
     ;;
 
+    # Sync other panes to the same folder
     'tcd')
         _pane_current=$(tmux display-message -p '#P')
         for _pane in $(tmux list-panes -F '#P'); do
@@ -186,11 +187,55 @@ case "$fn" in
         done
     ;;
 
+    # Sync all panes to the given folder
+    'tcd.all')
+        if [ ! -z "$firstParameter" -a "$firstParameter" != " " ]; then
+            for _pane in $(tmux list-panes -F '#P'); do
+              tmux send-keys -t ${_pane} "cd $firstParameter" ENTER
+            done
+        else
+            echo "Please specify a folder you would like to go"
+        fi
+    ;;
+
+    # Source a given script to other panes
     'tsc')
-        _pane_current=$(tmux display-message -p '#P')
-        for _pane in $(tmux list-panes -F '#P'); do
-          if (( "$_pane" != "$_pane_current" )); then
-            tmux send-keys -t ${_pane} "source $firstParameter" ENTER
-          fi
-        done
+        if [ ! -z "$firstParameter" -a "$firstParameter" != " " ]; then
+            _pane_current=$(tmux display-message -p '#P')
+            for _pane in $(tmux list-panes -F '#P'); do
+              if (( "$_pane" != "$_pane_current" )); then
+                tmux send-keys -t ${_pane} "source $firstParameter" ENTER
+              fi
+            done
+        else
+            echo "Please specify a script you would like to source"
+        fi
+    ;;
+
+    # Source a given script to all panes
+    'tsc.all')
+        if [ ! -z "$firstParameter" -a "$firstParameter" != " " ]; then
+            for _pane in $(tmux list-panes -F '#P'); do
+              tmux send-keys -t ${_pane} "source $firstParameter" ENTER
+            done
+        else
+            echo "Please specify a script you would like to source"
+        fi
+    ;;
+
+    # designed to help with ROS related source, assume catkin_make
+    # default is bash
+    # pass zsh or bash to customize
+    'tsc.ros')
+        if [ ! -z "$firstParameter" -a "$firstParameter" != " " ]; then
+            for _pane in $(tmux list-panes -F '#P'); do
+              tmux send-keys -t ${_pane} "source $HOME/catkin_ws/devel/setup.${firstParameter}" ENTER
+            done
+        else
+            for _pane in $(tmux list-panes -F '#P'); do
+              tmux send-keys -t ${_pane} "source $HOME/catkin_ws/devel/setup.bash" ENTER
+            done
+        fi
+    ;;
+
 esac

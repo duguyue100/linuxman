@@ -140,7 +140,10 @@ COMMANDS=(
     td
     tpx
     tcd
+    tcd.all
     tsc
+    tsc.all
+    tsc.ros
     c.sb
     c.ls.job
     c.load
