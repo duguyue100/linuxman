@@ -139,6 +139,8 @@ COMMANDS=(
     t.go.down
     td
     tpx
+    tcd
+    tsc
     c.sb
     c.ls.job
     c.load

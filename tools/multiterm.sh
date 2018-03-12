@@ -177,4 +177,20 @@ case "$fn" in
         tmux kill-pane
     ;;
 
+    'tcd')
+        _pane_current=$(tmux display-message -p '#P')
+        for _pane in $(tmux list-panes -F '#P'); do
+          if (( "$_pane" != "$_pane_current" )); then
+            tmux send-keys -t ${_pane} "cd $(pwd)" ENTER
+          fi
+        done
+    ;;
+
+    'tsc')
+        _pane_current=$(tmux display-message -p '#P')
+        for _pane in $(tmux list-panes -F '#P'); do
+          if (( "$_pane" != "$_pane_current" )); then
+            tmux send-keys -t ${_pane} "source $firstParameter" ENTER
+          fi
+        done
 esac
