@@ -152,6 +152,8 @@ COMMANDS=(
     c.avail
     c.act
     c.deact
+    r.py
+    rpy
 )
 
 if [ -z "$fn" ]; then
@@ -184,3 +186,4 @@ fi
 "$LINUX/tools/compressor.sh"
 "$LINUX/tools/multiterm.sh"
 "$LINUX/tools/cluster.sh"
+"$LINUX/tools/ros.sh"
