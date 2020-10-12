@@ -154,6 +154,7 @@ COMMANDS=(
     c.deact
     r.py
     rpy
+    r.get
 )
 
 if [ -z "$fn" ]; then
